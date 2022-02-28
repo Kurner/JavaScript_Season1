@@ -8,6 +8,7 @@
 
         // your code here
         let numbers = document.getElementById("numbers").value;
+        console.log(numbers);
         let arr = numbers.split(",");
         let arrSort = arr.sort((a, b) => a - b);
         
