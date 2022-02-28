@@ -9,6 +9,15 @@
 
         // your code here
 
+        let number = parseInt(document.getElementById("number").value);
+        let result = 1;
+
+        for(let n = 1; n <= number; n++)
+        {
+            result = result * n;
+        }
+
+        alert(result);
     });
 
 })();
