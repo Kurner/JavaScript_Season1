@@ -89,7 +89,7 @@
         {
             if(elem.lastname === lastName && elem.firstname === firstName)
             {
-                console.log(elem.email + " " + index);
+                console.log(elem.email);
             }
         }
     });

@@ -21,5 +21,13 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        function removeDuplicates(fruits) {
+
+            return [...new Set(fruits)];
+        }
+        console.log(removeDuplicates(fruits));
+    });
+
 
 })();
