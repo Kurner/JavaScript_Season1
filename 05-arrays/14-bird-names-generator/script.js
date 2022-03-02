@@ -31,4 +31,28 @@
     ]);
 
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+            
+        let birdsRandom = Math.floor(Math.random() * birds.length);
+
+        //Transforme un "Set" en ARRAY (whatever you put in the ())
+        let adjectivesARR = Array.from(adjectives);
+        let adjectiveRandom = Math.floor(Math.random() * adjectivesARR.length);
+
+        //On stock l'oiseau/adjectif correspondant à l'index birdsRandom/adjectiveRandom
+        let bird = birds[birdsRandom];
+        //On met adjectivesARR car adjectives(le set) n'est pas un "vrai" ARRAY
+        //On a transformé le set en ARRAY dans adjectiveARR (avec les "meme" valeurs)
+        let adj = adjectivesARR[adjectiveRandom];
+
+        if(bird.fem == true)
+        {
+            document.getElementById("target").innerHTML = ('La ' + bird.name + " " + adj + "e !");
+        }
+        else
+        {
+            document.getElementById("target").innerHTML = ('Le ' + bird.name + " " + adj + " !");
+        } 
+    });
+  
 })();

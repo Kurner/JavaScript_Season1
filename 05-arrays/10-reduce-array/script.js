@@ -83,13 +83,27 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", () => {
-        let result = 0;
 
-        people.reduce(function(a,b){
-            result += b.age
-        }) 
-           console.log(result);
-        });
+        //Solution 1
+        let addition = function (a, b)
+        {   //return renvoie le résultat dans a, b sera l'élément suivant à etre traiter
+            return {
+                age: a.age + b.age
+            };
+        }
 
+        //reduce permet la translation des valeurs d'un tableau de gauche à droite
+        let totalAge = people.reduce(addition);
+        console.log(totalAge.age);
+
+        //Solution 2
+        // let result = 0;
+
+        // people.reduce(function(a,b){
+        //     result += b.age
+        // }) 
+        //    console.log(result);
+        // });
+    });
 
 })();
