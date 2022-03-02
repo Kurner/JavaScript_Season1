@@ -16,16 +16,16 @@
             return `${this.lastname} ${this.firstname}`;
         }
 
-        set name(name)
-        {
-            name = this.name();
-            let nameDivide = name.split(' ');
-            return nameDivide;
-        }
+        // set name(name)
+        // {
+        //     name = this.name();
+        //     let nameDivide = name.split(' ');
+        //     return nameDivide;
+        // }
     }
     
     document.getElementById("run").addEventListener("click", () => {
-        
+
         let newInstance = new Person("Fierarh", "Myreina");
         console.log(newInstance.name);
     });
