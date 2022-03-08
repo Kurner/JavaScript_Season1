@@ -3,8 +3,14 @@
 
 (() => {
     // your code here
-
     
-
-
+    async function call()
+    {
+        await window.lib.getPosts().then((article) => { console.log(article) } );
+    }
+    
+    document.getElementById("run").addEventListener("click", () => {
+        call();
+    });
+    
 })();

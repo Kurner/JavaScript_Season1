@@ -3,4 +3,25 @@
 
 (() => {
     // your code here
+
+    async function handle()
+    {
+        await window.lib.getPersons().then((erreur, personnes) => { 
+            if(erreur != null)
+            {
+                console.error(erreur);
+            }
+            else
+            {
+                console.log(personnes);
+            }
+         } );
+
+    }
+
+    document.getElementById("run").addEventListener("click", () => {
+
+        handle();
+
+    });
 })();
